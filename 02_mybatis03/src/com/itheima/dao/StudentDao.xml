@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?> <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.dao.StudentDao">
+    <select id="getById" resultType="Student">
+        select * from student where id = #{id}
+     </select>
+
+    <insert id="save">
+        insert into student(id,name,age) values(#{id},#{name},#{age})
+    </insert>
+
+    <select id="getAll" resultType="Student">
+        select * from student
+    </select>
+
+    <select id="select1" resultType="Student">
+        select * from student where id=#{id}
+    </select>
+
+    <select id="select2" resultType="Student">
+        select * from student where age=#{age}
+    </select>
+
+    <select id="select3" resultType="Student">
+        select * from student where name=#{name} and age=#{age}
+    </select>
+
+    <select id="select4" resultType="Student">
+        select * from student where name=#{name} and age=#{age}
+    </select>
+
+    <select id="select5" resultType="Student">
+        select * from student where name=#{name} and age=#{age}
+    </select>
+
+    <select id="select6" resultType="Student">
+        select * from student where id='${value}'
+    </select>
+
+    <select id="select7" resultType="Student">
+        select * from student where name like '%${value}%'
+    </select>
+
+    <select id="select9" resultType="Student">
+        select * from student where name like '%' #{name} '%'
+    </select>
+
+    <select id="select10" resultType="String">
+        select name from student where id=#{id}
+    </select>
+
+    <select id="select11" resultType="String">
+        select name from student
+    </select>
+
+    <select id="select12" resultType="int">
+        select count(*) from student
+    </select>
+
+    <select id="select14" resultType="map">
+        select * from student
+    </select>
+
+    <select id="select15" resultType="Student">
+        select id,fullname as name ,age from student
+    </select>
+
+    <resultMap id="stu" type="Student">
+        <id property="id" column="id"/>
+        <result property="name" column="fullname"/>
+        <result property="age" column="age"/>
+    </resultMap>
+
+    <select id="select16" resultMap="stu">
+        select id,fullname,age from student
+    </select>
+
+    <select id="select17" resultType="Student">
+        select * from student
+        <where>
+        <if test="name!=null and name!=''">
+            name like '%' #{name} '%'
+        </if>
+
+        <if test="address!=null and address!=''">
+            and address like '%' #{address} '%'
+        </if>
+        </where>
+    </select>
+
+    <select id="select18" resultType="Student">
+        select * from student where id in
+        <foreach collection="array" item="id" separator="," close=")" open="(">
+            #{id}
+        </foreach>
+    </select>
+
+    <select id="select20" resultType="map">
+        select
+            s.name sname,
+            c.name cname
+        from student s
+        join classroom c
+        on s.classroomid=c.id
+    </select>
+
+    <select id="select21" resultType="com.itheima.vo.StudentAndClassroomVo">
+        select
+        s.id sid,
+        s.name sname,
+        s.age sage,
+        s.address saddress,
+        c.id cid,
+        c.name cname
+
+        from student s
+        join classroom c
+        on s.classroomid=c.id
+    </select>
+
+    <select id="select22" resultType="com.itheima.vo.StudentAndClassroomVo">
+        select
+        s.id sid,
+        s.name sname,
+        s.age sage,
+        s.address saddress,
+        c.id cid,
+        c.name cname
+
+        from student s
+        join classroom c
+        on s.classroomid=c.id
+        where s.name like '%' #{name} '%'
+    </select>
+</mapper>
