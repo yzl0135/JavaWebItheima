@@ -1,0 +1,55 @@
+.top{
+    background-color: black;
+    line-height: 40px;
+    text-align: right;
+    font-size: 20px;
+}
+
+.top a{
+    color: white;
+}
+
+a{
+    text-decoration: none;  /*去除下划线*/
+    color: black;           /*超链接颜色*/
+}
+
+a:hover{
+    color: red;
+}
+
+.left{
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+
+.left img{
+    width: 38px;
+    height: 38px;
+}
+
+.left span{
+    vertical-align: 50%;    /*文字垂直居中对齐*/
+}
+
+.center{
+    width: 60%;
+    float: left;
+}
+
+.right{
+    width: 20%;
+    float: left;
+}
+
+.footer{
+    clear: both;    /*清除浮动*/
+    background: blue;   /*背景色*/
+    text-align: center; /*文字水平居中对齐*/
+    line-height: 25px;
+}
+
+.footer a{
+    color: white;
+}

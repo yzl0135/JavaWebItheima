@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <servlet>
+        <servlet-name>请求对象常用方法_获取各种路径</servlet-name>
+        <servlet-class>TestReq.请求对象常用方法_获取各种路径_test01</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>请求对象常用方法_获取各种路径</servlet-name>
+        <url-pattern>/test01</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>请求对象常用方法_获取请求头信息</servlet-name>
+        <servlet-class>TestReq.请求对象常用方法_获取请求头信息_test02</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>请求对象常用方法_获取请求头信息</servlet-name>
+        <url-pattern>/test02</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>请求对象常用方法_获取请求参数信息_test03</servlet-name>
+        <servlet-class>TestReq.请求对象常用方法_获取请求参数信息_test03</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>请求对象常用方法_获取请求参数信息_test03</servlet-name>
+        <url-pattern>/test03</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>反射封装方式_test04</servlet-name>
+        <servlet-class>TestReq.反射封装方式_test04</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>反射封装方式_test04</servlet-name>
+        <url-pattern>/test04</url-pattern>
+    </servlet-mapping>
+
+</web-app>

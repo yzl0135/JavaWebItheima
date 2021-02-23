@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <servlet>
+        <servlet-name>HelloServlet01</servlet-name>
+        <servlet-class>Servlet快速入门.HelloServlet01</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServlet01</servlet-name>
+        <url-pattern>/helloServlet01</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>HelloHttpServlet</servlet-name>
+        <servlet-class>HttpServlet快速入门.HelloHttpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloHttpServlet</servlet-name>
+        <url-pattern>/helloHttpServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletConfig_class</servlet-name>
+        <servlet-class>ServletConfig案例.ServletConfig_class</servlet-class>
+
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+
+        <init-param>
+            <param-name>desc</param-name>
+            <param-value>This is ServletConfig</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletConfig_class</servlet-name>
+        <url-pattern>/servletConfig</url-pattern>
+    </servlet-mapping>
+
+    <context-param>
+        <param-name>globalEncoding</param-name>
+        <param-value>UTF-8</param-value>
+    </context-param>
+    <context-param>
+        <param-name>globalDesc</param-name>
+        <param-value>This is ServletContext</param-value>
+    </context-param>
+    
+    <servlet>
+        <servlet-name>studentServlet</servlet-name>
+        <servlet-class>stu.studentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>studentServlet</servlet-name>
+        <url-pattern>/studentServlet</url-pattern>
+    </servlet-mapping>
+
+    <!--给ServletContext起名字-->
+    <display-name>我叫ServletContext</display-name>
+</web-app>

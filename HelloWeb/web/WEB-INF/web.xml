@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <welcome-file-list>
+        <welcome-file>news/news.html</welcome-file>
+    </welcome-file-list>
+    
+    <servlet>
+        <servlet-name>helloServlet</servlet-name>
+        <servlet-class>Servlet.helloServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>helloServlet</servlet-name>
+        <url-pattern>/helloServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
+        <!--案例 发布静态资源-->
+        <!--实现步骤-->
+        <!--1. 创建一个 JavaWEB 项目。-->
+        <!--2. 将静态页面所需资源导入到项的web 目录下。-->
+        <!--3. 修改 web.xml 配置文件，修改默认主页。-->
+        <!--4. 将项目部署到 tomcat 中。 -->
+        <!--5. 启动 tomcat 服务。-->
+        <!--6. 打开浏览器测试查看页面。-->

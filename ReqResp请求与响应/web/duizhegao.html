@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册成绩</title>
+
+    <style>
+        div {
+            /*border: red 1px solid;*/
+        }
+
+        .center {
+            /*border: red 1px solid;*/
+            width: 30%;
+            height: 287px;
+            background-color: white;
+            border-radius: 15px;
+            margin-left: 34%;
+            margin-top: 150px;
+        }
+
+        .userpwd {
+            text-align: center;
+            margin: 10px;
+            height: 50px;
+        }
+
+        input {
+            width: 200px;
+            border-radius: 5px;
+            height: 25px;
+            border: gray 1px solid;
+            padding-left: 5px;
+        }
+
+        label {
+            font-size: 15px;
+            font-family: 宋体;
+
+        }
+
+        .footer {
+            margin: 10px;
+            height: 45px;
+        }
+
+        button[type='submit'] {
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            border-radius: 8px;
+            color: white;
+            font-size: 18px;
+            outline: none;
+        }
+
+        .wenzi {
+            text-align: center;
+            color: darkgray;
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div>
+        <img src="../img/logo.png">
+    </div>
+
+    <div class="center">
+        <form action="addStu_test04" method="post">
+            <div style="text-align: center;font-size: 25px;color: gold">
+                成&nbsp;&nbsp;&nbsp;&nbsp;绩&nbsp;&nbsp;&nbsp;&nbsp;注&nbsp;&nbsp;&nbsp;&nbsp;册
+                <hr/>
+            </div>
+            <div class="userpwd">
+                <label for="username">姓&nbsp;&nbsp;名&nbsp;&nbsp;</label>
+                <input type="text" id="username" name="username" placeholder="请输入姓名">
+            </div>
+            <div class="userpwd">
+                <label for="age">年&nbsp;&nbsp;龄&nbsp;&nbsp;</label>
+                <input type="age" id="age" name="age" placeholder="请输入年龄">
+            </div>
+            <div class="userpwd">
+                <label for="score">成&nbsp;&nbsp;绩&nbsp;&nbsp;</label>
+                <input type="score" id="score" name="score" placeholder="请输入成绩">
+            </div>
+            <div class="footer">
+                <button type="submit">确&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;定</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="wenzi">
+        <br/><br/>
+        登录/注册即表示您同意&nbsp;&nbsp;
+        <a href="#" target="_blank">用户协议</a>&nbsp;&nbsp;
+        和&nbsp;&nbsp;
+        <a href="#" target="_blank">隐私条款</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#" target="_blank">忘记密码?</a>
+    </div>
+</div>
+</body>
+</html>
