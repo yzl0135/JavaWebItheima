@@ -1,4 +1,4 @@
-package Test.conrtoller;
+package Test.controller;
 
 
 import Test.domain.Student;
